@@ -58,4 +58,38 @@ jQuery(function() {
     }
 
     dragula([dragContainer1, dragContainer2, document.querySelector('#bottom')], dragOptions);
+
+    var video = $('video')[0];
+
+    $('[data-action="play"]').click(function(e) {
+    	var $this = $(this);
+    	if($this.hasClass('fa-play')) {
+    		$this.removeClass('fa-play').addClass('fa-pause');
+    		video.play();
+    	} else {
+    		$this.removeClass('fa-pause').addClass('fa-play');
+    		video.pause();
+    	}
+    	e.preventDefault();
+    })
+
+    $('[data-action="backward"]').click(function(e) {
+    	video.currentTime -= 10
+    	e.preventDefault();
+    })
+
+    $('[data-action="forward"]').click(function(e) {
+    	video.currentTime += 10
+    	e.preventDefault();
+    })
+
+    $('[data-action="stop"]').click(function(e) {
+    	var play = $('[data-action="play"]');
+    	if(play.hasClass('fa-pause')) {
+    		play.removeClass('fa-pause').addClass('fa-play');
+    		video.pause();
+    	}
+    	video.currentTime = 0
+    	e.preventDefault();
+    })
 })
