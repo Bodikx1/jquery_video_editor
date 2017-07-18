@@ -1,0 +1,129 @@
+*
+	box-sizing: border-box;
+
+body 
+	margin: 0
+
+.main 
+	display: flex
+	flex-direction: column
+	height: 100vh
+
+.top 
+	position: relative
+	flex-shrink: 0
+	display: flex
+	height: 50%
+
+.left 
+	position: relative
+	flex-shrink: 0
+	display: flex
+	width: 50%
+	min-width: 450px
+	max-width: calc(100% - 200px)
+	background: #FCF100
+
+.left-resize 
+	position: absolute
+	width: 6px
+	top: 0
+	bottom: 0
+	right: -3px
+	cursor: col-resize
+
+.panel-management 
+	flex-shrink: 0
+	height: 100%
+	background: #EFEFEF
+	ul 
+		margin: 20px 10px 0
+		padding: 0
+		list-style: none
+	li 
+		margin-bottom: 20px
+	a 
+		font-size: 24px
+		color: #000
+		text-decoration: none
+
+.container-management 
+	width: calc(100% - 44px)
+
+.management-tab 
+	display: none
+	height: 100% 
+.flex-container
+	display: flex
+	height: 100% 
+	> div 
+		width: 50%
+		height: 100% 
+	ul 
+		margin: 0
+		padding: 0
+		list-style: none
+	li 
+		padding: 10px 15px
+		border-bottom: 1px solid #000
+	.folders
+		flex-shrink: 0
+		width: 200px
+		min-width: 170px
+		border-right: 1px solid #000
+		p
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin: 0
+			padding: 10px 15px
+		a
+			color: #000
+			text-decoration: none 
+	.folder-content
+		width: calc(100% - 200px)
+	.folder-tab
+		display: none
+		height: 100% 
+	.folder-tab-container
+		height: 100% 
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		overflow: auto
+	figure
+		margin: 10px
+		text-align: center
+	img
+		width: 240px
+		height: 150px
+.gu-mirror
+	text-align: center
+	img
+		width: 240px
+		height: 150px
+.right 
+	flex-grow: 1
+	width: 50%
+	background: #C0C0C0
+
+.bottom 
+	flex-grow: 1
+	display: flex
+	flex-wrap: wrap
+	height: 50%
+	background: #B2E31C
+	overflow: auto
+	figure
+		margin: 10px
+		text-align: center
+	img
+		width: 240px
+		height: 150px
+
+.top-resize 
+	position: absolute
+	bottom: -3px
+	width: 100%
+	height: 6px
+	cursor: row-resize
