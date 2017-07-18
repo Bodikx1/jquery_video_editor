@@ -26,7 +26,9 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 50%; }
+  height: 50%;
+  min-height: 200px;
+  max-height: calc(100% - 200px); }
 
 .left {
   position: relative;
@@ -38,8 +40,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 50%;
-  min-width: 450px;
-  max-width: calc(100% - 200px);
+  min-width: 510px;
+  max-width: calc(100% - 350px);
   background: #FCF100; }
 
 .left-resize {
@@ -95,7 +97,6 @@ body {
     -ms-flex-negative: 0;
     flex-shrink: 0;
     width: 200px;
-    min-width: 170px;
     border-right: 1px solid #000; }
     .flex-container .folders p {
       display: -webkit-box;
@@ -130,6 +131,9 @@ body {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
