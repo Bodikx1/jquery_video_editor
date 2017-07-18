@@ -103,9 +103,35 @@ body
 		width: 240px
 		height: 150px
 .right 
+	position: relative
+	display: flex
 	flex-grow: 1
 	width: 50%
 	background: #C0C0C0
+	.video-nav
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 40px
+		margin: 0
+		padding: 0
+		list-style: none
+		li
+			margin: 0 10px
+		a
+			font-size: 24px
+			color: #FFF
+			text-decoration: none 
+	video
+		margin: auto auto 0
+		width: auto
+		height: auto
+		max-width: 100%
+		max-height: 100%   
 
 .bottom 
 	flex-grow: 1
