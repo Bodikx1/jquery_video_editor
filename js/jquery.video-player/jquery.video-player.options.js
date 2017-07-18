@@ -1,0 +1,3 @@
+$(function () {
+  $('.right-box').video();
+});

@@ -1,0 +1,87 @@
+.left-box {
+  display: flex;
+}
+
+ul#menu-music,
+ul#menu-text,
+ul#menu-animation,
+ul#menu-settings {
+  display: none;
+}
+
+ul#menu-tab {
+  background: grey;
+  width: 8%;
+}
+
+ul#menu-tab li {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid blue;
+}
+
+ul#menu-tab li a {
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+li.active {
+  background: green !important;
+}
+
+ul#menu-media {
+  width: 40%;
+  border-right: 1px solid grey;
+}
+
+ul#menu-media li {
+  height: 10%;
+  display: flex;
+  align-items: center;
+}
+
+ul#menu-media li:nth-child(n+1){
+    /*border-top: 1px solid grey;*/
+    border-bottom: 1px solid grey;
+}
+
+ul#menu-media li a {
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+ul#gallary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 52%;
+}
+
+ul#gallary li {
+  height: 35%;
+  min-width: 40%;
+  margin: 10px;
+}
+
+ul#gallary li a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+ul#gallary li a div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: grey;
+}

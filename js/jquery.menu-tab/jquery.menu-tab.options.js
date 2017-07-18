@@ -1,0 +1,3 @@
+$(function () {
+  $('.left-box').menuTab();
+});

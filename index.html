@@ -1,129 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> Title</title>
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/dragula.min.css">
-	<link rel="stylesheet" href="css/main.css"/>
-</head>
-<body>
-	<div id="main" class="main">
-		<div class="top">
-			<div id="left" class="left">
-				<div class="left-resize"></div>
-				<div class="panel-management">
-					<ul>
-						<li>
-							<a href="#media" class="fa fa-file-video-o"></a>
-						</li>
-						<li>
-							<a href="#audio" class="fa fa-file-audio-o"></a>
-						</li>
-						<li>
-							<a href="#files" class="fa fa-file-text-o"></a>
-						</li>
-						<li>
-							<a href="#animation" class="fa fa-send-o"></a>
-						</li>
-						<li>
-							<a href="#settings" class="fa fa-cog"></a>
-						</li>
-					</ul>
-				</div>
-				<div class="container-management">
-					<div id="media" class="management-tab">
-						<div class="flex-container">
-							<div class="folders">
-								<ul>
-									<li>
-										<a href="#my-media">My Media</a>
-									</li>
-									<li>
-										<a href="#project-media">Project Media</a>
-									</li>
-								</ul>
-								<p><a href="#">Add New Folder</a><span class="fa fa-folder-o"></span></p>
-							</div>
-							<div class="folder-content">
-								<div id="my-media" class="folder-tab">
-									<div class="folder-tab-container">
-										<div class="add-new-item"></div>
-										<figure>
-											<img src="img/22cfh40ny8h6.jpg" alt="">
-											<figcaption>Photo by me.png</figcaption>
-										</figure>
-										<figure>
-											<img src="img/260444361.jpg" alt="">
-											<figcaption>Photo by me.png</figcaption>
-										</figure>
-										<figure>
-											<img src="img/283026-dragon-digital_art-fantasy_art-nature-winter-snow-trees-clouds-mountain-forest-hill.jpg" alt="">
-											<figcaption>Photo by me.png</figcaption>
-										</figure>
-										<figure>
-											<img src="img/eiskristalle-1938842_960_720.jpg" alt="">
-											<figcaption>Photo by me.png</figcaption>
-										</figure>
-									</div>
-								</div>
-								<div id="project-media" class="folder-tab">
-									<div class="folder-tab-container">
-										<div class="add-new-item"></div>
-										<figure>
-											<img src="img/frost-patterns-on-windows-1387971944JG1.jpg" alt="">
-											<figcaption>Photo by me.png</figcaption>
-										</figure>
-										<figure>
-											<img src="img/22cfh40ny8h6.jpg" alt="">
-											<figcaption>Photo by me.png</figcaption>
-										</figure>
-										<figure>
-											<img src="img/Snow-Images-For-Background-.jpg" alt="">
-											<figcaption>Photo by me.png</figcaption>
-										</figure>
-										<figure>
-											<img src="img/260444361.jpg" alt="">
-											<figcaption>Photo by me.png</figcaption>
-										</figure>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="audio" class="management-tab"></div>
-					<div id="files" class="management-tab"></div>
-					<div id="animation" class="management-tab"></div>
-					<div id="settings" class="management-tab"></div>
-				</div>
-			</div>
-			<div id="right" class="right">
-				<video src="video.mp4"></video>
-				<ul class="video-nav">
-					<li>
-						<a href="#" class="fa fa-backward" data-action="backward"></a>
-					</li>
-					<li>
-						<a href="#" class="fa fa-play" data-action="play"></a>
-					</li>
-					<li>
-						<a href="#" class="fa fa-forward" data-action="forward"></a>
-					</li>
-					<li>
-						<a href="#" class="fa fa-stop" data-action="stop"></a>
-					</li>
-				</ul>
-			</div>
-			<div class="top-resize"></div>
-		</div>
-		<div id="bottom" class="bottom"></div>
-	</div>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Prototype-page</title>
+    <link rel="stylesheet" href="css/reset_css.css">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="js/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery.prototype-page.css">
+    <link rel="stylesheet" href="css/jquery.menu-tab/jquery.menu-tab2.css">
+    <link rel="stylesheet" href="css/jquery.video-player/jquery.video-player.css">
+  </head>
+  <body>
+    <div id="container"></div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="js/jquery-resizable.min.js"></script>
-	<script src="js/dragula.min.js"></script>
-	<script src="js/main.js"></script>
-</body>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery.prototype-page.js"></script>
+    <script src="js/jquery.prototype-page.options.js"></script>
+    <script src="js/jquery.menu-tab/jquery.menu-tab2.js"></script>
+    <script src="js/jquery.menu-tab/jquery.menu-tab.options.js"></script>
+    <script src="js/jquery.video-player/jquery.video-player.js"></script>
+    <script src="js/jquery.video-player/jquery.video-player.options.js"></script>
+  </body>
 </html>
