@@ -53,11 +53,15 @@ ul#gallary {
   align-items: center;
   justify-content: center;
   width: 52%;
+  overflow: auto;
 }
 
 ul#gallary li {
-  height: 35%;
-  min-width: 40%;
+  max-height: 300px;
+  min-height: 200px;
+  /*height: 35%;*/
+  max-width: 250px;
+  min-width: 150px;
   margin: 10px;
 }
 
@@ -69,11 +73,10 @@ ul#gallary li a {
   justify-content: center;
 }
 
-ul#gallary li a div {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: grey;
+ul#gallary video {
+  max-height: 300px;
+  min-height: 200px;
+  max-width: 250px;
+  min-width: 150px;
+  z-index: 100%;
 }

@@ -40,12 +40,13 @@
   };
 
   var defaultsGallary = {
-    imgList: [
-      'Add New Item',
-      'Photo by me.png',
-      'Video by me.mov',
-      'Photo by me.png'
-    ],
+    videoSrc: [
+      'video/video.mp4',
+      'video/bear.mp4',
+      'video/Deer vs Man.mp4',
+      'video/Mickey Mouse.mp4',
+      'video/guess.mp4',
+    ]
   };
 
   function MenuTabs(element, optionsTabs){
@@ -135,14 +136,24 @@
     var ulGallary = $('<ul/>', {
       'id': 'gallary',
     }).appendTo(this.element);
-    this.config.imgList.forEach(function(elem, i){
+
+    this.config.videoSrc.forEach(function(elem, i){
       var li = $('<li/>').appendTo(ulGallary);
       var a = $('<a/>',{
           'href': '#',
         }).appendTo(li);
-      var div = $('<div/>').appendTo(a);
-      div.append('<i class="fa fa-picture-o" aria-hidden="true"></i>');
-      a.append(elem);
+
+      var video = $('<video/>', {
+        'controls': 'controls',
+        'class': 'video',
+      }).appendTo(a);
+
+      $('<source/>', {
+        'src': elem,
+        'type': 'video/mp4',
+      }).appendTo(video);
+
+      a.append(elem.split('/')[1]);
     });
   }
 
