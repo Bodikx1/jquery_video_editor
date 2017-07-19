@@ -55,7 +55,8 @@
   }
 
   MenuTabs.prototype.init = function () {
-    var namelistElement = this.config.namelistElement;
+    var configUl = $.extend({}, defaultsmenuDetails);
+    var config = this.config;
 
     var ulTabs = $('<ul/>',{
       'id': 'menu-tab',
@@ -67,19 +68,32 @@
       };
       $('#menu-tab li').each(function(i, elem){
          if(elem.classList.contains("active")){
-          // var firstClass = elem.className.split(' ')[0];
-          // var ul = $('ul .'+firstClass);
           elem.classList.remove("active");
           event.target.classList.add('active');
         } else {
           event.target.classList.add('active');
         }
       });
+      var firstTabClass = event.target.className.split(' ')[0];
+      var ulDetails = $('<ul/>', {
+        'id': 'menu',
+        'class': firstTabClass,
+      });
+      $('ul#menu').replaceWith(ulDetails);
+      var name = firstTabClass+"LiList";
+      console.log(configUl[name]);
+      configUl[name].forEach(function(elem, i){
+        var li = $('<li/>').appendTo(ulDetails);
+        var a = $('<a/>',{
+            'href': '#',
+            text: elem,
+          }).appendTo(li);
+      });
     });
 
     this.config.liList.forEach(function(elem, i){
       var li = $('<li/>', {
-        'class': namelistElement[i],
+        'class': config.namelistElement[i],
       }).appendTo(ulTabs);
       var a = $('<a/>',{
           'href': '#',
@@ -92,66 +106,18 @@
   }
 
   function MenuDetails(element, optionsMenuDetails){
-    this.config = $.extend({}, defaultsmenuDetails, optionsMenuDetails);
+    this.config = $.extend({}, defaultsmenuDetails);
     this.element = element;
     this.init();
   }
 
   MenuDetails.prototype.init = function (){
     var ulMediaDetails = $('<ul/>', {
-      'id': 'menu-media',
+      'id': 'menu',
       'class': 'media',
     }).appendTo(this.element);
     this.config.mediaLiList.forEach(function(elem, i){
       var li = $('<li/>').appendTo(ulMediaDetails);
-      var a = $('<a/>',{
-          'href': '#',
-          text: elem,
-        }).appendTo(li);
-    });
-
-    var ulMusicDetails = $('<ul/>', {
-      'id': 'menu-music',
-      'class': 'music',
-    }).appendTo(this.element);
-    this.config.musicLiList.forEach(function(elem, i){
-      var li = $('<li/>').appendTo(ulMusicDetails);
-      var a = $('<a/>',{
-          'href': '#',
-          text: elem,
-        }).appendTo(li);
-    });
-
-    var ulTextDetails = $('<ul/>', {
-      'id': 'menu-text',
-      'class': 'text',
-    }).appendTo(this.element);
-    this.config.textLiList.forEach(function(elem, i){
-      var li = $('<li/>').appendTo(ulTextDetails);
-      var a = $('<a/>',{
-          'href': '#',
-          text: elem,
-        }).appendTo(li);
-    });
-
-    var ulAnimationDetails = $('<ul/>', {
-      'id': 'menu-animation',
-      'class': 'animation',
-    }).appendTo(this.element);
-    this.config.animationLiList.forEach(function(elem, i){
-      var li = $('<li/>').appendTo(ulAnimationDetails);
-      var a = $('<a/>',{
-          'href': '#',
-          text: elem,
-        }).appendTo(li);
-    });
-
-    var ulSettingsDetails = $('<ul/>', {
-      'id': 'menu-settings',
-      'class': 'settings',
-    }).appendTo(this.element);
-    this.config.settingsLiList.forEach(function(elem, i){
-      var li = $('<li/>').appendTo(ulSettingsDetails);
       var a = $('<a/>',{
           'href': '#',
           text: elem,
