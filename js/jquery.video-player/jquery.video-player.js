@@ -15,14 +15,20 @@
       'class': 'video',
     }).appendTo(this.element);
 
-    var video = $('<video/>', {
-      'controls': 'controls',
+    var divWrap = $('<div/>', {
+      'class': 'wrap',
     }).appendTo(divContainer);
+
+    var video = $('<video/>').appendTo(divWrap);
 
     $('<source/>', {
       'src': 'video/video.mp4',
       'type': 'video/mp4',
     }).appendTo(video);
+
+    var controls = '<div id="video-controls"><i class="fa fa-play" aria-hidden="true"></i><i class="fa fa-pause" aria-hidden="true"></i><i class="fa fa-expand" aria-hidden="true"></i></div>';
+
+    divWrap.append(controls);
 
   }
 
