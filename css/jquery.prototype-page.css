@@ -44,3 +44,7 @@ div.horizontal-splitter {
   height: 5px;
   background: grey;
 }
+
+div.second-row img {
+  margin: 20px;
+}

@@ -47,7 +47,7 @@ ul#menu li a {
   padding-left: 10px;
 }
 
-ul#gallary {
+ul#video-gallary, ul#img-gallary {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -56,7 +56,7 @@ ul#gallary {
   overflow: auto;
 }
 
-ul#gallary li {
+ul#video-gallary li, ul#img-gallary li {
   max-height: 300px;
   min-height: 200px;
   /*height: 35%;*/
@@ -65,7 +65,7 @@ ul#gallary li {
   margin: 10px;
 }
 
-ul#gallary li a {
+ul#video-gallary li a, ul#img-gallary li a {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -73,7 +73,7 @@ ul#gallary li a {
   justify-content: center;
 }
 
-ul#gallary video {
+ul#video-gallary video {
   max-height: 300px;
   min-height: 200px;
   max-width: 250px;

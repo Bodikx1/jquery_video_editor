@@ -40,12 +40,18 @@
   };
 
   var defaultsGallary = {
-    videoSrc: [
-      'video/video.mp4',
-      'video/bear.mp4',
-      'video/Deer vs Man.mp4',
-      'video/Mickey Mouse.mp4',
-      'video/guess.mp4',
+    // videoSrc: [
+    //   'video/video.mp4',
+    //   'video/bear.mp4',
+    //   'video/Deer vs Man.mp4',
+    //   'video/Mickey Mouse.mp4',
+    //   'video/guess.mp4',
+    // ],
+    imageSrc: [
+      'images/priroda01.jpg',
+      'images/priroda02.jpg',
+      'images/priroda03.jpg',
+      'images/priroda04.jpg',
     ]
   };
 
@@ -82,7 +88,6 @@
       });
       $('ul#menu').replaceWith(ulDetails);
       var name = firstTabClass+"LiList";
-      console.log(configUl[name]);
       configUl[name].forEach(function(elem, i){
         var li = $('<li/>').appendTo(ulDetails);
         var a = $('<a/>',{
@@ -133,28 +138,41 @@
   }
 
   Gallery.prototype.init = function(){
-    var ulGallary = $('<ul/>', {
-      'id': 'gallary',
-    }).appendTo(this.element);
+      var ulGallary = $('<ul/>', {
+        'id': 'img-gallary',
+      }).appendTo(this.element);
 
-    this.config.videoSrc.forEach(function(elem, i){
-      var li = $('<li/>').appendTo(ulGallary);
-      var a = $('<a/>',{
-          'href': '#',
-        }).appendTo(li);
+      this.config.imageSrc.forEach(function(elem, i){
 
-      var video = $('<video/>', {
-        'controls': 'controls',
-        'class': 'video',
-      }).appendTo(a);
+        var li = $('<li/>').appendTo(ulGallary);
+            var a = $('<a/>',{
+                'href': '#',
+              }).appendTo(li);
 
-      $('<source/>', {
-        'src': elem,
-        'type': 'video/mp4',
-      }).appendTo(video);
+            $('<img/>', {
+              'src': elem,
+              'alt': 'image',
+              'width': 300,
+              'height': 200,
+            }).appendTo(a);
 
-      a.append(elem.split('/')[1]);
-    });
+        // var li = $('<li/>').appendTo(ulGallary);
+        // var a = $('<a/>',{
+        //     'href': '#',
+        //   }).appendTo(li);
+        //
+        // var video = $('<video/>', {
+        //   'controls': 'controls',
+        //   'class': 'video',
+        // }).appendTo(a);
+        //
+        // $('<source/>', {
+        //   'src': elem,
+        //   'type': 'video/mp4',
+        // }).appendTo(video);
+        //
+        // a.append(elem.split('/')[1]);
+      });
   }
 
   $.fn.menuTab = function (optionsTabs, optionsMenuDetails, optionsGalleryDetails) {
